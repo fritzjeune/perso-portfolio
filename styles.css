@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    /* font-size: 2rem; */
+    font-size: 2rem;
 }
 
 section {
@@ -20,6 +20,9 @@ section > div {
 
 .self-intro {
     background-color: #5C8D89;
+}
+
+.intro-cnt {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -28,12 +31,14 @@ section > div {
 
 nav {
     background-color: #A7D7C5;
-    width: 300px;
+    width: 500px;
     height: fit-content;
-    border-radius: 0 15px 15px 0;
-    transform: translateX(-300px);
-    transition: 200ms ease-in-out;
     position: absolute;
+    left: 0px;
+    border-radius: 0 15px 15px 0;
+    transform: translateX(-430px);
+    transition: 200ms ease-in-out;
+    
 }
 
 li > a:hover {
@@ -45,17 +50,21 @@ li > a:hover {
 }
 
 #hamb-menu {
-    width: 30px;
+    width: 50px;
     position: absolute;
     right: 0;
     margin: 10px;
 }
 
 .menu {
+    display: flex;
     list-style: none;
     margin-top: 50px;
-    margin-bottom: 0;
-    
+    margin-bottom: 0;  
+}
+
+.menu-vt {
+    flex-direction: column;
 }
 
 .menu > li > a {
@@ -63,12 +72,13 @@ li > a:hover {
     text-decoration: none;
     width: 100%;
     text-align: center;
-    padding: 30px;
+    padding: 25px;
     color: black;
 }
 
 div.profil-image {
     width: 60%;
+    max-width: 345px;
     border-radius: 50%;
     overflow: hidden;
     margin: auto;
@@ -76,6 +86,7 @@ div.profil-image {
 
 div.profil-image > img {
     width: 100%;
+
 }
 
 div.profil-info {
@@ -84,24 +95,32 @@ div.profil-info {
 }
 
 div.profil-info > h2 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 800;
 }
 
 div.profil-info > h3 {
     font-weight: 200;
-    font-size: 2rem;
+    font-size: 2.5rem;
 }
 
 .section-title {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 800;
     margin-bottom: 20px;
 }
 
 div.link-box {
     display: flex;
+}
+
+.b-1 {
     justify-content: flex-end;
+}
+
+.b-2 {
+    flex-direction: column;
+    row-gap: 10px;
 }
 
 div.link-box > a {
@@ -110,17 +129,28 @@ div.link-box > a {
     text-decoration: none; 
     padding: 20px;
     border-radius: 5px;
+    text-align: center;
+    border: 1px solid #A7D7C5;
+}
+
+div.link-box > a:hover {
+    background-color: #F4F9F4;
+    border: 1px solid #A7D7C5;
 }
 
 footer {
-    /* height: 150px; */
     background-color: #5C8D89;
     text-align: center;
     position: relative;
 }
 
+.menu-hz {
+    flex-direction: column;
+}
+
 .card-holder {
     /* padding: 0 3%; */
+    width: 100%;
     display: flex;
     flex-direction: column;
     row-gap: 40px;
@@ -136,7 +166,7 @@ footer {
 } 
 
 .my-card-title {
-    height: 200px;
+    height: 100px;
     background-color: #A7D7C5;
     display: flex;
     align-items: center;
@@ -145,7 +175,7 @@ footer {
 }
 
 .my-card-title > h3 {
-    font-size: 3rem;
+    font-size: 2rem;
     font-weight: 800;
     text-align: center;
 }
@@ -164,11 +194,10 @@ footer {
 .contact-me > div > form > * {
     display: inline-block;
     width: 100%;
-    margin: 20px;
     border-radius: 5px;
 }
 
-input[type="text"], input[type="email"],.contact-me > div > form > button {
+input[type="text"], input[type="email"], .contact-me > div > form > button {
     padding: 20px;
     border: none;
     background-color: #F4F9F4;
@@ -177,10 +206,12 @@ input[type="text"], input[type="email"],.contact-me > div > form > button {
 
 .contact-me > div > form > button {
     background-color: #74B49B;
+    border: 1px solid #74B49B;
 }
 
 .contact-me > div > form > button:hover {
     background-color: #F4F9F4;
+    border: 1px solid #A7D7C5;
 }
 
 /* social medias section */
@@ -190,6 +221,7 @@ input[type="text"], input[type="email"],.contact-me > div > form > button {
 
 .medias > a {
     width: 20%;
+    max-width: 100px;
     height: 20%;
 }
 
@@ -203,26 +235,59 @@ input[type="text"], input[type="email"],.contact-me > div > form > button {
     fill: #74B49B;
 }
 
+@media screen and (min-device-width: 575px) {
 
-@media (min-width: 767px) {
 
-}
-
-@media screen and (min-width: 575px) {
     body {
-        font-size: 2rem;
+        font-size: 1.2em;
     }
 
-    .self-intro {
+    #hamb-menu {
+        width: 30px;
+    }        
+
+    .intro-cnt {
+        max-width: 1200px;
+        margin: auto;
         flex-direction: row;
     }
     
     nav {
-        /* background-color: #A7D7C5; */
         width: 400px;
-        height: fit-content;
-        transform: translateX(-620px);
-        transition: 200ms ease-in-out;
-        position: absolute;
+        top: 0;
+        border-radius: 0 0 15px 0;
+        transform: translateX(-350px);
     }
+
+    .b-2 {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+@media screen and (min-device-width: 768px) {
+    .card-holder {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    .my-card {
+        width: 45%;
+    } 
+
+}
+
+@media screen and (min-device-width: 1024px) {
+    .wrapper {
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .menu-hz {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
 }
