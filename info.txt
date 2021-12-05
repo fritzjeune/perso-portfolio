@@ -1,0 +1,12 @@
+#F9F3DF
+#FDFCE5
+#D7E9F7
+#F4D19B
+
+
+palette 2 prefered
+
+#F4F9F4   for cards
+#A7D7C5   
+#74B49B   for btn
+#5C8D89
