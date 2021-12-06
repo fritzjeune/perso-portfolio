@@ -44,10 +44,17 @@
         <section class="contact-me">
             <div>
                 <h3 class="section-title">Send me Your message:</h3>
+                <div class="costum-alert">
+                    <h3 class="alert-title">Alert title</h3>
+                    <p class="alert-message">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Asperiores, molestiae!</p>
+                    <div class="link-box b-1">
+                        <a href="index.html" target="_self" rel="noopener noreferrer" id="go-expertise">Go Home<b> ></b></a>
+                    </div>
+                </div>
                 <form>
-                    <input type="text" name="visitor-name" id="visitor-name" class="shadow-sm p-3 mb-5"
+                    <input type="text" name="visitor-name" id="visitor-name" class="shadow-sm p-3 mb-5" required
                         placeholder="Your name.">
-                    <input type="email" name="visitor-email" id="visitor-email" class="shadow-sm p-3 mb-5"
+                    <input type="email" name="visitor-email" id="visitor-email" class="shadow-sm p-3 mb-5" required
                         placeholder="Your email">
                     <textarea name="visitor-message" id="visitor-message" class="shadow-sm p-3 mb-5" cols="30"
                         rows="10"></textarea>
@@ -98,10 +105,21 @@
 
     <script>
         var nav = $("nav");
-        console.log(nav);
         nav.on('click', () => {
             nav.toggleClass("open-nav");
         })
+
+        var form = $("form");
+        var myAlert = $(".costum-alert");
+
+        form.on('submit', ()=>{
+            event.preventDefault();
+            myAlert.children(".alert-title")[0].innerText = "Succes";
+            myAlert.children(".alert-message")[0].innerHTML = `Your Message has been sent successfully.Thank you very much for your interest.`;
+            myAlert.addClass("show-alert");
+        });
+
+
     </script>
 </body>
 
